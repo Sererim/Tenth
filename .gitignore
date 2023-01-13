@@ -1,1 +1,5 @@
 /.venv
+/.idea
+/__pycache__
+TODO.txt
+calc_log.csv
