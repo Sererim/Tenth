@@ -7,7 +7,7 @@ root = Tk()
 root.geometry("312x324+450+90")
 root.resizable(width=False, height=False)
 root.title("Калькулятор")
-root.configure(background='white')
+root.configure(background='misty rose')
 
 
 expression = ""
@@ -64,20 +64,20 @@ input_frame = Frame(root, width=312, height=50, bd=0, highlightbackground="black
 input_frame.pack(side=TOP)
 
 
-input_field = Entry(input_frame, font=('Calibri', 20, 'bold'), textvariable=input_text, width=50, bg="#eee", bd=0,
+input_field = Entry(input_frame, font=('Calibri', 20, 'bold'), textvariable=input_text, width=50, bg="#FBFDFE", bd=0,
                     justify=RIGHT)
 input_field.grid(row=0, column=0)
 input_field.pack(ipady=10)
 
 
-buttons_frame = Frame(root, width=312, height=272.5, bg="grey")
+buttons_frame = Frame(root, width=312, height=272.5, bg="black")
 buttons_frame.pack()
 
 
-clear = Button(buttons_frame, text="C", fg="black", width=32, height=3, bd=0, bg="#eee", cursor="hand2",
+clear = Button(buttons_frame, text="C", fg="black", width=32, height=3, bd=0, bg="#fff", cursor="hand2",
                command=lambda: button_clear()).grid(row=0, column=0, columnspan=3, padx=1, pady=1)
 
-divide = Button(buttons_frame, text="/", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+divide = Button(buttons_frame, text="/", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_click("/")).grid(row=0, column=3, padx=1, pady=1)
 
 seven = Button(buttons_frame, text="7", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
@@ -89,7 +89,7 @@ eight = Button(buttons_frame, text="8", fg="black", width=10, height=3, bd=0, bg
 nine = Button(buttons_frame, text="9", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
               command=lambda: button_click(9)).grid(row=1, column=2, padx=1, pady=1)
 
-multiply = Button(buttons_frame, text="*", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+multiply = Button(buttons_frame, text="*", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                   command=lambda: button_click("*")).grid(row=1, column=3, padx=1, pady=1)
 
 four = Button(buttons_frame, text="4", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
@@ -101,7 +101,7 @@ five = Button(buttons_frame, text="5", fg="black", width=10, height=3, bd=0, bg=
 six = Button(buttons_frame, text="6", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
              command=lambda: button_click(6)).grid(row=2, column=2, padx=1, pady=1)
 
-minus = Button(buttons_frame, text="-", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+minus = Button(buttons_frame, text="-", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                command=lambda: button_click("-")).grid(row=2, column=3, padx=1, pady=1)
 
 one = Button(buttons_frame, text="1", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
@@ -113,52 +113,52 @@ two = Button(buttons_frame, text="2", fg="black", width=10, height=3, bd=0, bg="
 three = Button(buttons_frame, text="3", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                command=lambda: button_click(3)).grid(row=3, column=2, padx=1, pady=1)
 
-plus = Button(buttons_frame, text="+", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+plus = Button(buttons_frame, text="+", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
               command=lambda: button_click("+")).grid(row=3, column=3, padx=1, pady=1)
 
 zero = Button(buttons_frame, text="0", fg="black", width=21, height=3, bd=0, bg="#fff", cursor="hand2",
               command=lambda: button_click(0)).grid(row=4, column=0, columnspan=2, padx=1, pady=1)
 
-point = Button(buttons_frame, text=".", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+point = Button(buttons_frame, text=".", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                command=lambda: button_click(".")).grid(row=4, column=2, padx=1, pady=1)
 
-equals = Button(buttons_frame, text="=", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+equals = Button(buttons_frame, text="=", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_equal()).grid(row=4, column=3, padx=1, pady=1)
 
-sin = Button(buttons_frame, text="sin", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+sin = Button(buttons_frame, text="sin", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("sin")).grid(row=5, column=0, padx=1, pady=1)
 
-cos = Button(buttons_frame, text="cos", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+cos = Button(buttons_frame, text="cos", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("cos")).grid(row=5, column=1, padx=1, pady=1)
 
-tan = Button(buttons_frame, text="tan", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+tan = Button(buttons_frame, text="tan", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("tan")).grid(row=5, column=2, padx=1, pady=1)
 
-exp = Button(buttons_frame, text="exp", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+exp = Button(buttons_frame, text="exp", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("exp")).grid(row=5, column=3, padx=1, pady=1)
 
-log = Button(buttons_frame, text="log", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+log = Button(buttons_frame, text="log", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("log2")).grid(row=6, column=0, padx=1, pady=1)
 
-ln = Button(buttons_frame, text="ln", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+ln = Button(buttons_frame, text="ln", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("log")).grid(row=6, column=1, padx=1, pady=1)
 
-lg = Button(buttons_frame, text="lg", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+lg = Button(buttons_frame, text="lg", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("log10")).grid(row=6, column=2, padx=1, pady=1)
 
-sqrt = Button(buttons_frame, text="sqrt", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+sqrt = Button(buttons_frame, text="sqrt", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_func("sqrt")).grid(row=6, column=3, padx=1, pady=1)
 
-j = Button(buttons_frame, text="j", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+j = Button(buttons_frame, text="j", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_click("j")).grid(row=7, column=0, padx=1, pady=1)
 
-cosh = Button(buttons_frame, text="cosh", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
-                command=lambda: button_click("cosh")).grid(row=7, column=1, padx=1, pady=1)
+cosh = Button(buttons_frame, text="cosh", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
+                command=lambda: button_func("cosh")).grid(row=7, column=1, padx=1, pady=1)
 
-sinh = Button(buttons_frame, text="sinh", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
-                command=lambda: button_click("sinh")).grid(row=7, column=2, padx=1, pady=1)
+sinh = Button(buttons_frame, text="sinh", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
+                command=lambda: button_func("sinh")).grid(row=7, column=2, padx=1, pady=1)
 
-braces = Button(buttons_frame, text="()", fg="black", width=10, height=3, bd=0, bg="#eee", cursor="hand2",
+braces = Button(buttons_frame, text="()", fg="black", width=10, height=3, bd=0, bg="#fff", cursor="hand2",
                 command=lambda: button_braces()).grid(row=7, column=3, padx=1, pady=1)
 
 
